@@ -12,9 +12,11 @@
 const btnOdd = document.getElementById("odd-button");
 const btnEven = document.getElementById("even-button")
 
-const userNumber = prompt("dimmi numero")//document.getElementById("user-number");
-while()
-
+let userNumber = prompt("inserisci un numero da 1 a 5 ")//document.getElementById("user-number");
+// add while in order to prevent NaN values and number less than 0 and greater than 5
+while((isNaN(userNumber)) || (userNumber <= 0)  || ( userNumber >= 5)){
+    userNumber = parseInt(prompt("Inserisci il numero richiesto da 1 a 5"));
+}
 
 
 // generatore random
