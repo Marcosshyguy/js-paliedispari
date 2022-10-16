@@ -2,8 +2,8 @@
 // Creare una funzione per capire se la parola inserita è palindroma.
 
 // creato funzione
-function palindromecontrol(word){
-    const functionWord = word
+function isPalindrome(word){
+    const functionWord = word;
     let word1 = ""
     for(let i = 0; i < functionWord.length;i++ ){
         word1 = functionWord[i];
@@ -23,15 +23,17 @@ function palindromecontrol(word){
         answer = alert("parola non palindroma")
     }
     return answer;
-
 }
 
 // Chiedere utente parola
-const userWord = prompt("Dimmi una parola!");
+let userWord = prompt("Dimmi una parola!");
 
-const result = palindromecontrol(userWord);
+while(Number(userWord)){
+    userWord = prompt("Inserisci parola non numero");
+}
 
-console.log(result);
+const result = isPalindrome(userWord);
+
 
 
 
