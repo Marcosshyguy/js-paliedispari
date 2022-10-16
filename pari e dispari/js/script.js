@@ -4,29 +4,34 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-// let oddOrEven = prompt("pari o dispari");
-// const usernumber = parseInt(prompt("dimmi un numero da 1 a 5"))
-// console.log(oddOrEven, usernumber);
 
 // button
 const btnOdd = document.getElementById("odd-button");
 const btnEven = document.getElementById("even-button")
 
+// html sum
+const sumResult = document.getElementById("sum");
+
+
+
 let userNumber = prompt("inserisci un numero da 1 a 5 ")//document.getElementById("user-number");
 // add while in order to prevent NaN values and number less than 0 and greater than 5
-while((isNaN(userNumber)) || (userNumber <= 0)  || ( userNumber >= 5)){
+while((isNaN(userNumber)) || (userNumber <= 0)  || ( userNumber > 5)){
     userNumber = parseInt(prompt("Inserisci il numero richiesto da 1 a 5"));
 }
 
 
-// generatore random
+// random generator
 const cpuNumber = randomNumberGen()
-console.log(cpuNumber);
 
-// lister to check  if sum is even or not
+// sum result and sum on html
 const sum = parseInt(userNumber) + cpuNumber;
+sumResult.innerHTML = sum
+console.log(userNumber, cpuNumber, sum);
+
+
 let result =""
-// lister
+// listers that check is sum is even or odd
 btnEven.addEventListener("click", function(){
      result = isEven(sum)
 })
